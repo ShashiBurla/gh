@@ -1,0 +1,45 @@
+name: Burp Suite Enterprise Scan
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  burp_scan:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Start Burp Scan
+      run: |
+        # Install necessary tools (e.g., cURL)
+        sudo apt-get -y install curl
+
+        # Replace with your Burp API key
+        API_KEY="$BURP_API_KEY"
+
+        # Replace with your target URL
+        TARGET_URL="https://example.com"
+
+        # Start Burp Suite Enterprise scan
+        curl -X POST https://your-burp-enterprise-server:8181/v1.2/scans \
+          -H "Authorization: Bearer $API_KEY" \
+          -d '{
+            "scan_configuration_name": "Your Scan Configuration Name",
+            "urls": [
+              {
+                "url": "'"$TARGET_URL"'",
+                "issue_definitions": [
+                  {
+                    "issue_type": "crawled"
+                  }
+                ]
+              }
+            ]
+          }'
+
+      env:
+        BURP_API_KEY: ${{ secrets.BURP_API_KEY }}
