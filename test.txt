@@ -4,3 +4,4 @@ line 2
 line 3
 checking the fetch
 checking the fetch2
+checking push to remote
