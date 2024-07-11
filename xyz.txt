@@ -1,5 +1,4 @@
 line 1
 line 2
 line 3
-reset
 line 5 by branch1
