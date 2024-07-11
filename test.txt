@@ -6,4 +6,3 @@ checking the fetch
 checking the fetch2
 checking push to remote
 clean
-checking stash
