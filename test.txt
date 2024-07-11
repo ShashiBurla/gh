@@ -1,1 +1,8 @@
+adding lines to test auto merge
 line 1
+line 2
+line 3
+checking the fetch
+checking the fetch2
+checking push to remote
+clean
