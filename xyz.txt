@@ -4,3 +4,4 @@ line 3
 line 5 by branch1
 
 checking conflict
+test1
