@@ -1,1 +1,5 @@
 line 1
+line 2
+line 3
+checking the fetch
+checking conflict from 2 branches
